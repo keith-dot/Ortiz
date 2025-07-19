@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PalawanPay UI Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .app {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 10px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 5px 0;
+    }
+
+    .status-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .greeting {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .avatar {
+      font-size: 30px;
+    }
+
+    .greet-text p {
+      margin: 0;
+    }
+
+    .status {
+      font-size: 13px;
+      color: #990202;
+    }
+
+    .verified {
+      color: rgb(6, 233, 82);
+    }
+
+    .upgrade {
+      color: rgb(107, 3, 3);
+    }
+
+    .mail {
+      position: relative;
+      font-size: 20px;
+    }
+
+    .badge {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      border-radius: 50%;
+      padding: 2px 5px;
+    }
+
+    .balance-card {
+      background: linear-gradient(135deg, #21abeb, #0a024d);
+      border-radius: 10px;
+      padding: 20px;
+      color: white;
+      margin: 10px 0;
+    }
+
+    .amount {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .points {
+      font-size: 14px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .cash-in,
+    .cash-out {
+      background: white;
+      color: rgb(5, 56, 151);
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+    }
+
+    .transact {
+      margin-top: 10px;
+    }
+
+    .quick-transfers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .box {
+      background: #eaf9ec;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      flex: 1 1 calc(50% - 5px);
+      box-sizing: border-box;
+    }
+
+    .box.full {
+      flex: 1 1 100%;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .menu-item {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .menu-item.new::after {
+      content: "New";
+      display: block;
+      color: red;
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    .bottom-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 20px;
+    }
+
+    .nav-item {
+      font-size: 12px;
+      text-align: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .nav-item.center {
+      font-size: 24px;
+    }
+
+    .nav-item.active {
+      font-weight: bold;
+      color: rgb(255, 12, 44);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top-bar">
+      <span>10:27pm</span>
+      <div class="status-icons">
+        <span>📶</span>
+        <span>🔋82%</span>
+      </div>
+    </div>
+
+    <div class="greeting">
+      <div class="avatar">👤</div>
+      <div class="greet-text">
+        <p>Good Morning Jolene!</p>
+        <p class="status"><span class="verified">✔ Verified Account</span> <span class="upgrade">| Upgrade Now →</span></p>
+      </div>
+      <div class="mail">📩<span class="badge">2</span></div>
+    </div>
+
+    <div class="balance-card">
+      <p class="amount">PHP 400,250.75</p>
+      <p class="points">Account Balance →</p>
+      <div class="actions">
+        <button class="cash-in">Cash In</button>
+        <button class="cash-out">Cash Out</button>
+      </div>
+    </div>
+
+    <div class="transact">
+      <p>Transact Again</p>
+      <div class="quick-transfers">
+        <div class="box">QR Send Money to <strong>Arlene S.</strong><br>********4403</div>
+        <div class="box">Send to <strong>GCash / PayMaya</strong><br>********56</div>
+        <div class="box">Pay <strong>BPI</strong><br>********1123</div>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-item">Send Money</div>
+      <div class="menu-item new">Loans</div>
+      <div class="menu-item">Buy Load</div>
+      <div class="menu-item">Pay Bills</div>
+      <div class="menu-item new">Send Ampao</div>
+      <div class="menu-item">Credits</div>
+      <div class="menu-item">Claim</div>
+      <div class="menu-item new">Pera International</div>
+    </div>
+
+    <div class="bottom-nav">
+      <div class="nav-item active">🏠 Home</div>
+      <div class="nav-item">🎁 Rewards</div>
+      <div class="nav-item center">🔍</div>
+      <div class="nav-item">Notifications<span class="badge">4</span></div>
+      <div class="nav-item">❓ Help</div>
+    </div>
+  </div>
+</body>
+</html>

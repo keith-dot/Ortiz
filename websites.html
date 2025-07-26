@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Green Themed Web Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--green-light: #458fff;
+--green-dark: #0ddf18;
+--text-color: #1a1a1a;
+--white: #ffffff;
+--muted-green: #f2fff2;
+--shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+background-color: var(--white);
+color: var(--text-color);
+line-height: 1.7;
+scroll-behavior: smooth;
+}
+
+header, footer {
+background: linear-gradient(to right, var(--green-dark), var(--green-light));
+color: white;
+text-align: center;
+padding: 2em 1em;
+box-shadow: 0 2px 6px var(--shadow);
+}
+
+nav {
+background-color: var(--green-light);
+padding: 1em;
+text-align: center;
+}
+
+nav a {
+margin: 0 1em;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+section {
+max-width: 1100px;
+margin: 2em auto;
+background: var(--white);
+padding: 2em;
+border-radius: 12px;
+box-shadow: 0 8px 16px var(--shadow);
+}
+
+.hero {
+background: linear-gradient(to right, var(--green-dark), var(--green-light));
+color: white;
+text-align: center;
+padding: 4em 1em;
+}
+
+.hero h2 {
+font-size: 2.5em;
+color: black;
+}
+
+h2 {
+color: var(--green-dark);
+}
+
+img {
+max-width: 100%;
+border-radius: 8px;
+margin-top: 1em;
+}
+
+ul, ol {
+padding-left: 1.5em;
+font-weight: bold;
+}
+
+a {
+color: var(--green-dark);
+}
+
+.flex-container {
+display: flex;
+gap: 1.5em;
+flex-wrap: wrap;
+}
+
+.flex-container .column {
+flex: 1 1 300px;
+background-color: var(--muted-green);
+padding: 1.5em;
+border-radius: 10px;
+box-shadow: 0 4px 8px var(--shadow);
+}
+
+.card {
+max-width: 320px;
+margin: 0 auto;
+padding: 2em;
+background-color: white;
+box-shadow: 0 6px 12px var(--shadow);
+text-align: center;
+border-radius: 10px;
+}
+
+.card img {
+width: 100px;
+border-radius: 50%;
+}
+
+input[type="radio"] {
+margin-right: 0.5em;
+}
+
+input[type="submit"], button {
+padding: 0.75em 1.5em;
+background: var(--green-dark);
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 1em;
+}
+
+input[type="submit"]:hover, button:hover {
+background: var(--green-light);
+color: black;
+}
+
+.cta input {
+padding: 0.75em;
+width: 80%;
+max-width: 400px;
+margin: 0.5em 0;
+border-radius: 5px;
+border: 1px solid var(--green-light);
+font-size: 1em;
+color: black;
+}
+
+.countdown-section {
+background: url('https://i.pinimg.com/originals/00/ed/7e/00ed7ea3401fe1605ecaffeca76dc7ec.gif') no-repeat center center;
+background-size: cover;
+color: rgb(255, 255, 255);
+padding: 3em 2em;
+border-radius: 10px;
+}
+
+.countdown-section * {
+color: var(--white);
+}
+
+.heart {
+width: 100px;
+height: 90px;
+position: relative;
+margin: 3em auto;
+transform: scale(1);
+animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+content: "";
+position: absolute;
+width: 50px;
+height: 80px;
+background: var(--green-dark);
+border-radius: 50px 50px 0 0;
+top: 0;
+}
+
+.heart::before {
+left: 50px;
+transform: rotate(-45deg);
+transform-origin: 0 100%;
+}
+
+.heart::after {
+left: 0;
+transform: rotate(45deg);
+transform-origin: 100% 100%;
+}
+
+@keyframes beat {
+0%, 100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+}
+
+.quiz-feedback {
+margin-top: 1em;
+font-weight: bold;
+}
+
+.correct {
+background-color: #d4edda;
+}
+
+.wrong {
+background-color: #f8d7da;
+}
+
+#topBtn {
+position: fixed;
+bottom: 30px;
+right: 30px;
+padding: 10px;
+background: var(--green-dark);
+color: white;
+border: none;
+border-radius: 5px;
+display: none;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.flex-container {
+flex-direction: column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>HELLO IM KEITH AND THIS IS MY WEB PLAYGROUND!</h1>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Welcome to My Web Playground!</h2>
+<p>Built with bright mind and a love for green designs.</p>
+</section>
+
+<section id="basic">
+<h2>Building Block of Playground</h2>
+<p>Must visit places here in batangas where i live!</p>
+<img src="https://i.ytimg.com/vi/x9xRhIbDgOA/maxresdefault.jpg" />
+<p><a href="https://www.google.com" target="_blank">Visit Google</a></p>
+<h3>My Favorite places here (ORDERED) </h3>
+<ul>
+<li><strong>Calatagan</strong></li>
+<li><strong>Nasugbu</strong></li>
+<li><strong>San Juan</strong></li>
+</ul>
+
+<h3> My Favorite Foods here (UNORDERED) </h3>
+<ol>
+<li><strong>LOMI</strong></li>
+<li><strong>BULALO</strong></li>
+<li><strong>GOTONG BATANGAS</strong></li>
+<li><strong>TAPANG TAAL</strong></li>
+</ol>
+</section>
+
+<section id="about">
+<h2>Structuring my Sandbox with Semantics</h2>
+<article>
+<h3>Name: Keith Ashley</h3>
+<p>I love green because it gives peace and relaxation in our minds especially nature.</p>
+</article>
+<article>
+<h3>Hobbies</h3>
+<ul>
+<li><strong>Watch Movies</strong></li>
+<li><strong>Design</strong></li>
+<li><strong>Read</strong></li>
+</ul>
+</article>
+<article>
+<h3>Favorite Links</h3>
+<ul>
+<li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+<li><a href="https://codechum.com" target="_blank">CodeChum</a></li>
+<li><a href="https://github.com" target="_blank">GitHub</a></li>
+</ul>
+</article>
+<footer> ALL ABOUT ME </footer>
+</section>
+
+<section>
+<h2>Quiz Time: Test Your Learnings (Required)</h2>
+<form id="quizForm">
+<div>
+<p>1. What does HTML stand for?</p>
+<label><input type="radio" name="q1" value="correct" required> HyperText Markup Language</label><br>
+<label><input type="radio" name="q1" value="wrong"> Hyperlink and Text Markup Language</label><br>
+<label><input type="radio" name="q1" value="wrong"> Home Tool Markup Language</label>
+</div>
+<div>
+<p>2. Which tag is used to make text bold?</p>
+<label><input type="radio" name="q2" value="wrong" required> &lt;b&gt;</label><br>
+<label><input type="radio" name="q2" value="wrong"> &lt;strong&gt;</label><br>
+<label><input type="radio" name="q2" value="correct"> Both of the above</label>
+</div>
+<input type="submit" value="Submit Quiz">
+<p id="quizResult" class="quiz-feedback"></p>
+</form>
+</section>
+
+<section id="projects">
+<h2>Laying Out my Playground with Flex and Style</h2>
+<div class="flex-container">
+<div class="column">HTML Basics</div>
+<div class="column">CSS Styling</div>
+<div class="column">JavaScript Logic</div>
+</div>
+</section>
+
+<section>
+<h2>My Card: Styled and Ready! </h2>
+<div class="card">
+<img src="images/keith.jpg" alt="PROFILE" />
+<h3>Keith Ashley Ortiz</h3>
+<p>3RD year IT Student</p>
+<p>Email: 23-12328@lcctanauan.edu.ph</p>
+</div>
+</section>
+
+<section>
+<section class="countdown-section">
+<h2>Final Touch : Get ready to Count and Email Magic..</h2>
+<p>We're launching something exciting soon! Stay updated by signing up below:</p>
+<h3 id="timer" class="countdown">Countdown: 00d 00h 00m 00s</h3>
+<form id="emailForm" class="cta">
+<input
+type="email"
+id="emailInput"
+placeholder="Enter your email"
+required
+/>
+<button type="submit">Notify Me</button>
+<p id="feedback" style="margin-top:10px;"></p>
+</form>
+</section>
+
+
+<section>
+<h2>CSS Hearbeat: Draw with Codes!</h2>
+<div class="heart"></div>
+</section>
+
+<footer>
+<p>Project by Keith Ashley | View on <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" style="color: #f2fff2;" target="_blank">GitHub</a></p>
+</footer>
+
+<button id="topBtn">↑ Top</button>
+
+<script>
+// Scroll-to-top button
+const topBtn = document.getElementById("topBtn");
+window.onscroll = () => {
+topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+};
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+// Countdown
+const timerEl = document.getElementById("timer");
+const launchDate = new Date("2025-12-31T23:59:59");
+function updateCountdown() {
+const now = new Date();
+const diff = launchDate - now;
+if (diff <= 0) {
+timerEl.textContent = "🎉 Launched!";
+return;
+}
+const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+const m = Math.floor((diff / 1000 / 60) % 60);
+const s = Math.floor((diff / 1000) % 60);
+timerEl.textContent = `Countdown: ${d}d ${h}h ${m}m ${s}s`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Email validation
+document.getElementById("emailForm").addEventListener("submit", function(e) {
+e.preventDefault();
+const email = document.getElementById("emailInput").value.trim();
+const feedback = document.getElementById("feedback");
+const emailPattern = /^[^\d][\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+if (!emailPattern.test(email)) {
+feedback.textContent = "❌ Invalid email.";
+feedback.style.color = "red";
+} else {
+feedback.textContent = "✅ Successfully subscribed!";
+feedback.style.color = "green";
+this.reset();
+}
+});
+
+// Quiz logic
+document.getElementById("quizForm").addEventListener("submit", function(e) {
+e.preventDefault();
+let correct = 0;
+const answers = this.querySelectorAll("input[type='radio']");
+answers.forEach(input => {
+const label = input.parentElement;
+label.classList.remove("correct", "wrong");
+if (input.checked) {
+if (input.value === "correct") {
+label.classList.add("correct");
+correct++;
+} else {
+label.classList.add("wrong");
+}
+}
+});
+document.getElementById("quizResult").textContent = `✅ You got ${correct}/2 correct.`;
+});
+</script>
+</body>
+</html>
